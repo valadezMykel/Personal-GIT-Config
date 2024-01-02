@@ -1,0 +1,28 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Mykel
+	email = valadezmykel@gmail.com
+[core]
+	editor = code -w
+[diff]
+	tool = diffcode
+	
+[difftool "diffcode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool]
+	prompt = false
+[status]
+	short = true
+	branch = true
+[commit]
+	branch = true
+
+[merge]
+	tool = code
+[mergetool]
+	cmd = "code --wait $MERGED"
+	prompt = false
+	keepbackup = false
+[alias]
+	onelinegraph = log --oneline --graph --decorate
